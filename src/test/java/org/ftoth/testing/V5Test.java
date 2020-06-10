@@ -10,26 +10,28 @@ import java.time.Duration;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-public class ExampleTest
+public class V5Test
 {
+	private static final String LOG_PREFIX = "[v5] - ";
+
 	@BeforeAll
 	static void init() {
-		System.out.println("INIT");
+		System.out.println(LOG_PREFIX + "INIT");
 	}
 
 	@AfterAll
 	static void cleanup() {
-		System.out.println("CLEANUP");
+		System.out.println(LOG_PREFIX + "CLEANUP");
 	}
 
 	@BeforeEach
 	void initBeforeEveryTest(TestInfo info) {
-		System.out.println("INIT-EVERY: " + info.getDisplayName());
+		System.out.println(LOG_PREFIX + "INIT-EVERY: " + info.getDisplayName());
 	}
 
 	@AfterEach
 	void cleanupBeforeEveryTest(TestInfo info) {
-		System.out.println("CLEANUP-EVERY: " + info.getDisplayName());
+		System.out.println(LOG_PREFIX + "CLEANUP-EVERY: " + info.getDisplayName());
 	}
 
 	@Test
@@ -69,7 +71,7 @@ public class ExampleTest
 	void performanceTest() {
 		assertTimeout(Duration.ofSeconds(3), () -> {
 			for (int n=0; n<1000000; n++) {
-				//System.out.println("counter:" + n);		// uncomment than fails
+				//System.out.println(LOG_PREFIX + "counter:" + n);		// uncomment than fails
 			}
 		});
 	}
