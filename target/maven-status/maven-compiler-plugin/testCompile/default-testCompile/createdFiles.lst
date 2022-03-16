@@ -1,0 +1,5 @@
+org\ftoth\testing\V5Test.class
+org\ftoth\testing\AppTest.class
+org\ftoth\testing\service\TodoServiceStub.class
+org\ftoth\testing\V4Test.class
+org\ftoth\testing\TodoFilterTest.class

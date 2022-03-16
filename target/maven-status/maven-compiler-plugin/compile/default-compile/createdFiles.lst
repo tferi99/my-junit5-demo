@@ -1,0 +1,4 @@
+org\ftoth\testing\Proba.class
+org\ftoth\testing\App.class
+org\ftoth\testing\service\TodoService.class
+org\ftoth\testing\TodoServiceFilter.class
